@@ -14,14 +14,18 @@ public class AgenziaImmobilare {
 
     //getter
 
+    public List<Immobili> getImmobiliList() {
+        return immobiliList;
+    }
+
 
     //Metodi
 
     public void addList(Immobili immobili){
-        String code = immobili.getCode();
+        /*String code = immobili.getCode();
         if (searchImmobile(code) != null){
             throw new IllegalArgumentException("Immobile è gia presente nella lista");
-        }
+        }*/
         immobiliList.add(immobili);
     }
 
@@ -52,6 +56,13 @@ public class AgenziaImmobilare {
             }
         }
         return max;
+    }
+
+    @Override
+    public String toString() {
+        return "AgenziaImmobilare{" +
+                "immobiliList=" + immobiliList +
+                '}';
     }
 }
 

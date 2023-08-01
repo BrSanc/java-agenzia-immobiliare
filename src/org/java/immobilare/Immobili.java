@@ -1,8 +1,10 @@
 package org.java.immobilare;
 
+import java.util.Scanner;
+
 public abstract class Immobili {
     private String code;
-    private String Address;
+    private String address;
     private String cap;
     private String city;
     private int surfaceSM;
@@ -14,7 +16,15 @@ public abstract class Immobili {
 
     public Immobili(String code, String address, String cap, String city, int surfaceSM) {
         this.code = code;
-        this.Address = address;
+        this.address = address;
+        this.cap = cap;
+        this.city = city;
+        this.surfaceSM = surfaceSM;
+        this.interestedUser = 0;
+    }
+    public Immobili() {
+        this.code = code;
+        this.address = address;
         this.cap = cap;
         this.city = city;
         this.surfaceSM = surfaceSM;
@@ -29,7 +39,7 @@ public abstract class Immobili {
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public String getCap() {
@@ -63,14 +73,31 @@ public abstract class Immobili {
         this.surfaceSM = surfaceSM;
     }
 
+    public static void InsertData(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insert Code: ");
+        String code = scanner.nextLine();
+        System.out.println("Insert Address: ");
+        String address = scanner.nextLine();
+        System.out.println("Insert CAP: ");
+        String cap = scanner.nextLine();
+        System.out.println("Insert City: ");
+        String city = scanner.nextLine();
+        System.out.println("Insert Surface SM: ");
+        int surfaceSM = scanner.nextInt();
+    }
+
+
     @Override
     public String toString() {
         return "code: " + code + " | " +
-                "Address: " + Address + " | " +
+                "Address: " + address + " | " +
                 "cap: " + cap + " | " +
                 "city: " + city + " | " +
                 "surfaceSM: " + surfaceSM + " | " +
                 "interestedUser: " + interestedUser +
                 " | ";
     }
+
+
 }

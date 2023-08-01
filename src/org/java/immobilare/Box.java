@@ -1,5 +1,7 @@
 package org.java.immobilare;
 
+import java.util.Scanner;
+
 public class Box extends Immobili{
 
     int parkingSpaces;
@@ -9,10 +11,13 @@ public class Box extends Immobili{
         this.parkingSpaces = parkingSpaces;
     }
 
+    public Box(){
+
+    }
+
     //getter-------------------------
 
     //Metodi
-
 
     @Override
     public String toString() {
