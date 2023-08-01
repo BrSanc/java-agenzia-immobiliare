@@ -73,19 +73,7 @@ public abstract class Immobili {
         this.surfaceSM = surfaceSM;
     }
 
-    public static void InsertData(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Insert Code: ");
-        String code = scanner.nextLine();
-        System.out.println("Insert Address: ");
-        String address = scanner.nextLine();
-        System.out.println("Insert CAP: ");
-        String cap = scanner.nextLine();
-        System.out.println("Insert City: ");
-        String city = scanner.nextLine();
-        System.out.println("Insert Surface SM: ");
-        int surfaceSM = scanner.nextInt();
-    }
+
 
 
     @Override
