@@ -25,7 +25,7 @@ public class AgenziaImmobilare {
         immobiliList.add(immobili);
     }
 
-    public Immobili searchImmobile(String codeNum) {
+    public Immobili searchImmobile(String codeNum) throws NullPointerException{
         Immobili immobileSearched = null;
 
         for (int i = 0; i < immobiliList.size(); i++) {
@@ -34,8 +34,14 @@ public class AgenziaImmobilare {
 
             }
         }
+        if (immobileSearched == null){
+            System.out.print("Immobile non trovato: ");
+        }
+
         return immobileSearched;
     }
+
+
 
     public Immobili returnMostInterestingImmobile() {
         Immobili max= null;

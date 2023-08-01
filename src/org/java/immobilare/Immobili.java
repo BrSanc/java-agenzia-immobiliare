@@ -57,6 +57,9 @@ public abstract class Immobili {
     }
 
     public void resetSurfaceSM(int surfaceSM) {
+        if (surfaceSM <= 0){
+            throw new IllegalArgumentException("Devi darmi un numero superiore a 0");
+        }
         this.surfaceSM = surfaceSM;
     }
 

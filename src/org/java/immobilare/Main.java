@@ -32,9 +32,19 @@ public class Main {
         System.out.println(agenziaImmobilare.returnMostInterestingImmobile());
         System.out.println("Interested user: "+(agenziaImmobilare.returnMostInterestingImmobile()).getInterestedUser());
 
-        System.out.println();
-        System.out.println(agenziaImmobilare.searchImmobile("EWRT54W"));
-        System.out.println(agenziaImmobilare.searchImmobile("OPRE98RE"));
+
+
+            System.out.println();
+            System.out.println(agenziaImmobilare.searchImmobile("EWRT54W"));
+            System.out.println(agenziaImmobilare.searchImmobile("OPRE98RE"));
+
+
+        System.out.println(a1);
+        //a1.resetSurfaceSM(-9); ------
+        a1.resetSurfaceSM(20);
+
+        System.out.println(a1);
+
 
     }
 }
