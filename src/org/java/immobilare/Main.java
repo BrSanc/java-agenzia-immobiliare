@@ -31,5 +31,9 @@ public class Main {
         System.out.println(agenziaImmobilare.returnMostInterestingImmobile());
         System.out.println("Interested user: "+(agenziaImmobilare.returnMostInterestingImmobile()).getInterestedUser());
 
+        System.out.println();
+        System.out.println(agenziaImmobilare.searchImmobile("EWRT54W"));
+        System.out.println(agenziaImmobilare.searchImmobile("OPRE98RE"));
+
     }
 }
