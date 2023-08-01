@@ -22,6 +22,7 @@ public class Main {
         agenziaImmobilare.addList(v1);
         agenziaImmobilare.addList(b1);
 
+
         System.out.println(b1.toString());
         System.out.println(a1.toString());
         System.out.println(v1.toString());

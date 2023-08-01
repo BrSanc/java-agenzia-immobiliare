@@ -18,18 +18,20 @@ public class AgenziaImmobilare {
     //Metodi
 
     public void addList(Immobili immobili){
+        String code = immobili.getCode();
+        if (searchImmobile(code) != null){
+            throw new IllegalArgumentException("Immobile è gia presente nella lista");
+        }
         immobiliList.add(immobili);
     }
 
     public Immobili searchImmobile(String codeNum) {
-        boolean found = false;
-        int contatore = 0;
         Immobili immobileSearched = null;
 
-        for (int i = 0; i < immobiliList.size() && !found; i++) {
+        for (int i = 0; i < immobiliList.size(); i++) {
             if (codeNum.equalsIgnoreCase(immobiliList.get(i).getCode())) {
                 immobileSearched = immobiliList.get(i);
-                found = true;
+
             }
         }
         return immobileSearched;
